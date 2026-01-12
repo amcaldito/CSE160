@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Draw a blue rectangle (canvas version)</title>
+    </head>
+
+    <body onload="main()">
+        <script src="../lib/cuon-matrix-cse160.js"></script>
+        <script src="asg0.js"></script>
+        
+
+        <div class = "rectangle">
+            <canvas id="example" width="400" height="400"></canvas>
+        </div>
+
+        <div class = "v1 inputs">
+            <label for ="v1.x">v1: x</label>
+            <input
+                type="text"
+                id="v1x"
+                name="v1x"
+            />
+
+            <label for ="v1.y">y</label>
+            <input
+                type="text"
+                id="v1y"
+                name="v1y"
+            />
+        </div>
+
+        <div class = "v2 inputs">
+            <label for ="v2.x">v2: x</label>
+            <input
+                type="text"
+                id="v2x"
+                name="v2x"
+            />
+
+            <label for ="v2.y">y</label>
+            <input
+                type="text"
+                id="v2y"
+                name="v2y"
+            />
+        </div>
+        
+        <div class = "draw button">
+            <input type="button" value="Draw" onclick="handleDrawEvent()"/>
+        </div>
+
+        
+        <div class= "Operation-Scalar">
+            <label for="Operation">Operation: </label>
+            <select name="Operation" id="Operation">
+                <option value="add">Add</option>
+                <option value="sub">Subtract</option>
+                <option value="mul">Multiply</option>
+                <option value="div">Divide</option>
+                <option value="mag">Magnitude</option>
+                <option value="norm">Normalize</option>
+                <option value="ang">Angle Between</option>
+                <option value="area">Area</option>
+            </select>
+
+            <label for ="Scalar">Scalar: </label>
+            <input
+                type="text"
+                id="Scalar"
+                name="Scalar"
+            />
+        </div>
+
+        <div class = "draw button2">
+            <input type="button" value="Draw" onclick="handleDrawOperationEvent()"/>
+        </div>
+
+    <div class="student-info">
+        <p><strong>Name:</strong> Amaya Caldito<br>
+        <strong>Email:</strong> acaldito@ucsc.edu</p>
+    </div>
+
+
+    </body>
+</html> 
