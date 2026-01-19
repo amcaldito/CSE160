@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+
+    <style>
+    /* This creates the side-by-side layout */
+    .main-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start; /* Aligns both to the top */
+      gap: 20px; /* Adds space between the canvas and your notes */
+    }
+
+  </style>
+  </head>
+
+  <body onload="main()">
+    <div class="main-container">
+
+    <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>
+
+    <div id="notesToGrader">
+      Name: Amaya Caldito<p>
+      Email: acaldito@ucsc.edu<p>
+        <h3>Notes to Grader:</h3>
+        <strong>Feature I Added to make it "Awesome":</strong> 
+        Using these sources: <a href="https://webglfundamentals.org/webgl/lessons/webgl-and-alpha.html">webglfundamentals.org</a> and <a href="https://learnwebgl.brown37.net/11_advanced_rendering/alpha_blending.html">learnwebgl.net</a>,
+        I implemented Alpha Transparency (using <code>gl.BLEND</code>) and a slider to control the opacity of my shapes. I also used <code>gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)</code> which specifies the blending percentages. In other words, I enabled alpha blending in WebGL and modified the fragment shader to accept an alpha value. The slider allows users to adjust the transparency of the shapes they draw on the canvas.
+        <p>
+        <strong>How to View My Drawing:</strong>
+        Click "Recreate My Picture" to see my drawing and "Show Reference Picture Drawing" to see the hand-drawn reference image. 
+    </div>
+
+</div>
+    
+    </div>
+    <p id = "numdot"> ___ </p>
+    <div class = "buttons">
+      <button type="button" id="clear">Clear Canvas</button><p>
+      <button type="button" id="green">Green</button>
+      <button type="button" id="red">Red</button><p>
+
+      <button type="button" id="pointButton">Point</button>
+      <button type="button" id="triButton">Triangle</button>
+      <button type="button" id="circleButton">Circle</button><p>
+
+      <button type="button" id="drawPic">Recreate My Picture</button>
+      <button type="button" id="refPic">Show Reference Picture Drawing</button>
+      <img id="myrefpic" src="refPic.jpg" style="display:none; width:400px; height:auto; margin-top:10px;" alt="hand-drawn reference">
+    </div>
+
+    <div class = "sliders">
+      <p>
+      Red <input type ="range" min="0" max="100" value="100" class="slider" id="redSlide">
+      <p>
+      Green <input type ="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+      <p>
+      Blue <input type ="range" min="0" max="100" value="0" class="slider" id="blueSlide">
+      <p>
+      Size <input type ="range" min="5" max="40" value="0" class="slider" id="sizeSlide">
+      <p>
+      (Circles) Segment Count <input type ="range" min="3" max="100" value="10" class="slider" id="segmentSlide">
+      <p>
+      Transparency<input type="range" min="0" max="100" value="100" class="slider" id="alphaSlide">
+    </p>
+    </div>
+    
+  </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Points.js"></script>
+    <script src="Circle.js"></script>
+    <script src="ColoredPoints.js"></script>
+  </body>
+</html>
+
+
+  <!-- // Enable alpha blending
+  gl.enable(gl.BLEND);
+
+  // Specify the blending function
+  gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA); -->
