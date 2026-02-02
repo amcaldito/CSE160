@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blocky Animal</title>
+    <style>
+      .main-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    </style>
+  </head>
+
+  <body onload="main()">
+    <div class="main-container">
+      <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports "canvas"
+      </canvas>
+
+      <div class="notes-section">
+        Name: Amaya Caldito <br />
+        Email: acaldito@ucsc.edu <br />
+        <h2>Notes to grader:</h2>
+        <p>
+          - My assigned animal is a dinosaur. <br>
+          - To use "poke" animation, hold down the "shift" key while clicking on the canvas. <br>
+          - For my poke animation, I made the dinosaur blink for 5 seconds. <br>
+          - To fulfill the multi-joint animation rubric point, I made the  tail have three segements.
+          - On my browser (Chrome), I get around min of 10 fps with no animations.
+        </p>
+      </div>
+    </div>
+
+    <p id="numdot"> ___ </p>
+
+    <div class="buttons">
+      <!-- <button type="button" id="green">Green</button>
+      <button type="button" id="red">Red</button> -->
+
+      <!-- <button type="button" id="clear">Clear Canvas</button>
+      <p> -->
+
+      <!-- <button type="button" id="pointButton">Point</button>
+      <button type="button" id="triButton">Triangle</button> -->
+      <!-- <button type="button" id="circleButton">Circle</button> -->
+    </div>
+
+    <div class="sliders">
+      <!-- <p>
+      Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlide">
+      <p>
+      Green <input type="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+      <p>
+      Blue <input type="range" min="0" max="100" value="0" class="slider" id="blueSlide"> -->
+      <p>Body <input type="range" min="-5" max="5" value="0" class="slider" id="bodySlide">
+
+      <p>Head <input type="range" min="-5" max="10" value="0" class="slider" id="magentaSlide">
+      Animation: 
+        <button type="button" id="animationMagentaOnButton">ON</button>
+        <button type="button" id="animationMagentaOffButton">OFF</button>
+        <p>
+
+      <p>Legs <input type="range" min="-10" max="17" value="0" class="slider" id="legsSlide">
+      Animation: 
+        <button type="button" id="animationLegsOnButton">ON</button>
+        <button type="button" id="animationLegsOffButton">OFF</button>
+        <p>
+      
+        <!-- Animation: 
+        <button type="button" id="bodyOn">ON</button>
+        <button type="button" id="bodyOff">OFF</button> -->
+        <p>
+        <p> Tail Base <input type="range" min="-45" max="45" value="0" class="slider" id="tail1Slide">
+        Animation: 
+          <button type="button" id="tail1On">ON</button>
+          <button type="button" id="tail1Off">OFF</button>
+        <p>
+        <p> Tail Middle <input type="range" min="-45" max="45" value="0" class="slider" id="tail2Slide">
+        Animation: 
+          <button type="button" id="tail2On">ON</button>
+          <button type="button" id="tail2Off">OFF</button>
+        <p>
+        <p> Tail Tip <input type="range" min="-45" max="45" value="0" class="slider" id="tail3Slide">
+        Animation: 
+          <button type="button" id="tail3On">ON</button>
+          <button type="button" id="tail3Off">OFF</button>
+        <p>
+      Camera Angle <input type="range" min="0" max="360" value="0" class="slider" id="angleSlide">
+      <p>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Points.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="BlockyAnimal.js"></script>
+    
+  </body>
+</html>
