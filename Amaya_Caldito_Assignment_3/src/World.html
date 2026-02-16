@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>asgn3</title>
+    <style>
+      .main-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    </style>
+  </head>
+
+  <body onload="main()">
+    <div class="main-container">
+      <canvas id="webgl" width="1300" height="800">
+        Please use a browser that supports "canvas"
+      </canvas>
+
+      <div class="notes-section">
+        Name: Amaya Caldito <br />
+        Email: acaldito@ucsc.edu <br />
+        <h3>Notes to grader:</h3>
+          <p style="font-size: 14px;">Controls: </p>
+          <ul>
+            <li>Move: WASD</li>
+            <li>Rotate POV: Mouse or Q/E to pan</li>
+            <li>Restart Game: R</li>
+            <li>Place block: B</li>
+            <li>Delete placed block: X</li>
+          </ul>
+          <p>For my project, I made a Minecraft inspired world and implemented a "Collect the Coins" game to make it more interactive. See console log for game output messages.</p>
+          <p id="score" style="font-size: 40px; font-weight: bold; color: gold; background: #333; padding: 10px; display: inline-block;">Coins: 0/0</p>
+          <p id="numdot"> ___ </p>
+        </p>
+      </div>
+    </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    
+    <script src="../lib/Triangle.js"></script>
+    <script src="../lib/Points.js"></script>
+    <script src="../lib/Circle.js"></script>
+    <script src="../lib/Cube.js"></script>
+    <script src="../lib/Camera.js"></script>
+    <script src="World.js"></script>
+    
+  </body>
+</html>
