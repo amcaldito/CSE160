@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>asgn4</title>
+    <style>
+      .main-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    </style>
+  </head>
+
+  <body onload="main()">
+    <div class="main-container">
+      <canvas id="webgl" width="500" height="500">
+        Please use a browser that supports "canvas"
+      </canvas>
+
+      <div class="notes-section">
+        Name: Amaya Caldito <br />
+        Email: acaldito@ucsc.edu <br />
+        <h3>Notes to grader:</h3>
+          <p style="font-size: 14px;">Controls: </p>
+          <ul>
+            <li>Move: WASD</li>
+            <li>Rotate POV: Mouse or Q/E to pan or camera angle slider</li>
+          </ul>
+        <h3>Lighting Controls:</h3></p>
+        To animate the light source, press "On" under Light Animation.</p> 
+        To manually adjust light source using slider, first make sure animation is off. </p>
+        
+          <div class="buttons">
+        <p>Normals:
+        <button id="NormalOn">On</button>
+        <button id="NormalOff">Off</button>
+        </p>
+        <p>Lighting:
+        <button id="LightOn">On</button>
+        <button id="LightOff">Off</button>
+        </p>
+        <p>Light Animation:
+        <button id="AnimOn">On</button>
+        <button id="AnimOff">Off</button>
+        </p>
+    </div>
+
+    <div class="sliders">
+      <p>Light Position:
+      X <input type = "range" min="-500" max="500" value="0" class="slider" id="lightX">
+      Y <input type = "range" min="-500" max="500" value="200" class="slider" id="lightY">
+      Z <input type = "range" min="-500" max="500" value="300" class="slider" id="lightZ">
+    </p>
+    <p>Light Color:
+      R <input type = "range" min="0" max="255" value="255" class="slider" id="lightR">
+      G <input type = "range" min="0" max="255" value="255" class="slider" id="lightG">
+      B <input type = "range" min="0" max="255" value="255" class="slider" id="lightB">
+    </p>
+    Camera Angle <input type = "range" min="-180" max="180" value="0" class="slider" id="angleSlide">
+    </div>
+
+    
+          <p id="numdot"> ___ </p>
+        </p>
+      </div>
+    </div>
+
+    
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    
+    <script src="../lib/Triangle.js"></script>
+    <script src="../lib/Points.js"></script>
+    <script src="../lib/Circle.js"></script>
+    <script src="../lib/Cube.js"></script>
+    <script src="../lib/Sphere.js"></script>
+    <script src="../lib/OBJModel.js"></script>
+    <script src="../lib/Camera.js"></script>
+    <script src="World.js"></script>
+    
+  </body>
+</html>
