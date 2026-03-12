@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asgn5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #controls-ui {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        font-family: 'Press Start 2P', monospace;
+        font-size: 8px;
+        color: #7edc5cf4;
+        line-height: 2;
+        pointer-events: all;
+        text-shadow: 1px 1px 0px #000, 2px 2px 0px rgba(0,0,0,0.5);
+        opacity: 1;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.45);
+        padding: 14px 18px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 255, 255, 0.2);
+      }
+
+      #controls-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 4px;
+      }
+
+      #controls-header span {
+        font-family: 'Press Start 2P', monospace;
+        font-size: 8px;
+        color: #85e164;
+        text-shadow: 1px 1px 0px #000;
+      }
+
+      #controls-body p {
+        margin: 0;
+      }
+
+      #toggle-btn {
+        font-family: 'Press Start 2P', monospace;
+        font-size: 7px;
+        color: #64bce1;
+        background: rgba(45, 248, 31, 0.1);
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        border-radius: 3px;
+        padding: 4px 6px;
+        cursor: pointer;
+        text-shadow: 1px 1px 0px #000;
+        white-space: nowrap;
+      }
+
+      #toggle-btn:hover {
+        background: rgba(0, 200, 255, 0.25);
+      }
+    </style>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.179.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="controls-ui">
+      <div id="controls-header">
+        <span>CONTROLS</span>
+        <button id="toggle-btn" onclick="toggleControls()">HIDE MENU</button>
+      </div>
+      <div id="controls-body">
+        <p><strong>ASGN 5 - Amaya Caldito (acaldito@ucsc.edu)</strong></p>
+        <p>-------------</p>
+        <p>CONTROLS: </p>
+        <p>WASD — move</p>
+        <p>Q / E — up / down</p>
+        <p>SHIFT — sprint</p>
+        <p>SPACE — automated flying</p>
+        <p>HOLD RIGHT CLICK — drag camera</p>
+        <p>(more info in README.md)</p>
+      </div>
+    </div>
+
+    <script>
+      function toggleControls() {
+        const body = document.getElementById('controls-body');
+        const btn = document.getElementById('toggle-btn');
+        const isHidden = body.style.display === 'none';
+        body.style.display = isHidden ? 'block' : 'none';
+        btn.textContent = isHidden ? '▲ HIDE' : '▼ SHOW';
+      }
+    </script>
+
+    <script type="module" src="../src/asgn5.js"></script>
+  </body>
+</html>
